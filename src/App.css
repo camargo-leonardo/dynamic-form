@@ -1,0 +1,8 @@
+html, body {
+    height: 100vh !important;
+}
+
+body {
+    display: flex !important;
+    background-color: #1a202c !important;
+}
