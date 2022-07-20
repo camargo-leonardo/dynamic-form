@@ -1,5 +1,11 @@
-const express = require('express')
-const { resolve } = require('path')
+import express from 'express';
+import { resolve } from 'path';
+
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 
@@ -7,7 +13,7 @@ app.use('/',
     express.static(
         resolve(
             __dirname,
-            './build'
+            './dist'
         )
     )
 )
